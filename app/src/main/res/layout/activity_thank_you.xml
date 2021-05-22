@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".ThankYouActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp">
+
+            <LinearLayout
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_edittext"
+                android:orientation="vertical"
+                android:gravity="center">
+<!--
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>-->
+                <LinearLayout
+                    android:id="@+id/linearLayout_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="180dp"
+                        android:src="@drawable/logoman" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:text="Contact for any assistance.\nServeigo GINI will assist you." />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Booking has been done!\n Our professional will be at your doorstep soon"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                    <Button
+                        android:id="@+id/buttonHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="Go to Home"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginHorizontal="30dp"
+                        android:background="@drawable/nextbg"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--<TextView
+                android:id="@+id/textView_serviceType"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/parallelogram_border"
+                android:layout_marginStart="40dp"
+                android:paddingVertical="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="10dp"
+                android:textAlignment="center"
+                android:text="Booking Done"/>-->
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".SignupActivity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="60dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imageView_user"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_main"
+                android:layout_marginBottom="20dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageViewUser"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/plumbing"
+                app:civ_circle_background_color="@android:color/white"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Upload your image"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/textViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Profile Image not uploaded"
+                android:visibility="gone"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginBottom="20dp"/>
+            <EditText
+                android:id="@+id/editText_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/round_edittext_signup"
+                android:layout_marginBottom="15dp"
+                android:hint="        Name"/>
+            <EditText
+                android:id="@+id/editText_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/round_edittext_signup"
+                android:drawableStart="@drawable/ic_baseline_mail_outline_24"
+                android:layout_marginBottom="15dp"
+                android:inputType="textEmailAddress"
+                android:hint="   Email"/>
+            <EditText
+                android:id="@+id/editText_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginBottom="15dp"
+                android:hint="       Address"
+                android:background="@drawable/round_edittext_signup"
+                android:inputType="textMultiLine"
+                android:minLines="3"/>
+            <!--<EditText
+                android:id="@+id/editText_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/round_edittext_signup"
+                android:layout_marginBottom="15dp"
+                android:inputType="number"
+                android:maxLength="4"
+                android:hint="         Otp Number"/>-->
+            <Button
+                android:id="@+id/button_signup"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Submit"
+                android:background="@drawable/nextbg"/>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BookingFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="50dp">
+                    <RelativeLayout
+                        android:id="@+id/cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/round_edittext"
+                        android:padding="5dp"
+                        android:layout_margin="20dp">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="30dp"
+                            android:layout_height="match_parent"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/textView_serviceType"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/parallelogram_border"
+                        android:layout_marginStart="40dp"
+                        android:paddingStart="30dp"
+                        android:padding="8dp"
+                        android:text="My Bookings       "/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textView_noResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20dp"
+                    android:visibility="gone"
+                    android:text="No Result found"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimaryDark"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+        <!-- View pager to swipe views -->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:background="@color/backgroundColour"
+            android:layout_height="fill_parent"/>
+    </RelativeLayout>
+
+</FrameLayout>
